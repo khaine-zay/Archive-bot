@@ -7,7 +7,7 @@ db = Database()
 
 
 class User(db.Entity):
-    uid = PrimaryKey(int, auto=True, sql_type='BIGINT')
+    uid = PrimaryKey(str, auto=True, sql_type='BIGINT')
     status = Required(int)  # status-user: "INSERT"/"NOT-INSERT"
 
 
