@@ -12,7 +12,7 @@ def start(_, msg: types.Message):
     uid = msg.from_user.id
 
     with db_session:
-        if not User.get(uid=uid):
+        if not User.get(uid=str(uid)):
             User(uid=uid, status=0)  # Initializing the user on database
             commit()
 
