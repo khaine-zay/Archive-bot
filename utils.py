@@ -7,8 +7,8 @@ db = Database()
 
 
 class User(db.Entity):
-    uid = PrimaryKey(str, auto=True)
-    status = Required(str)  # status-user: "INSERT"/"NOT-INSERT"
+    uid = PrimaryKey(int, auto=True)
+    status = Required(int)  # status-user: "INSERT"/"NOT-INSERT"
 
 
 db.bind(provider='sqlite', filename='zipbot.sqlite', create_db=True)
