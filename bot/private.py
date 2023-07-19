@@ -57,7 +57,7 @@ def enter_files(_, msg: types.Message):
                 msg.reply(Msg.too_much)
             else:
                 downsts = msg.reply(Msg.downloading, True)  # send status-download message
-                msg.download(dir_work(uid), dl_progress, progress_args=(downsts,))
+                msg.download(dir_work(uid), dl_progress, progress_args=(downsts))
 
                 downsts.delete()  # delete status-download message
 
@@ -100,7 +100,7 @@ def stop_zip(_, msg: types.Message):
 
     try:
         msg.reply_document(zip_path, progress=up_progress,  # send the zip-archive
-                           progress_args=(stsmsg,))
+                           progress_args=(stsmsg))
     except ValueError as e:
         msg.reply(Msg.unknow_error.format(str(e)))
 
