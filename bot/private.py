@@ -51,7 +51,7 @@ def enter_files(_, msg: types.Message):
 
             type = msg.document or msg.video or msg.photo or msg.audio
 
-            if type.file_size > 20000000:
+            if type.file_size > 200000000:
                 msg.reply(Msg.too_big)
             elif len(list_dir(uid)) > 20:
                 msg.reply(Msg.too_much)
