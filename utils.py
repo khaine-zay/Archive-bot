@@ -8,7 +8,7 @@ db = Database()
 
 
 class User(db.Entity):
-    uid = PrimaryKey(int, 'BIGINT', auto=True)
+    uid = PrimaryKey(int, size=64, auto=True)
     status = Required(int)  # status-user: "INSERT"/"NOT-INSERT"
 
 
@@ -33,9 +33,8 @@ def list_dir(uid: int) -> list:
 
 
 def up_progress(current, total, msg: Message):
-    """ edit status-msg with progress of the uploading """
-    msg.edit(f"**התקדמות ההעלאה: {current * 100 / total:.1f}%**")
-
+    """Edit the status message with the progress of the uploading."""
+    msg.edit(f"**Upload progress: {current * 100 / total:.1f}%**")
 
 # ========= MSG class =========
 class Msg:
