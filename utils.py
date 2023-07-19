@@ -34,12 +34,17 @@ def list_dir(uid: int) -> list:
 
 def up_progress(current, total, msg: Message):
     """Edit the status message with the progress of the uploading."""
-    msg.edit(f"**Upload progress: {current * 100 / total:.1f}%**")
+    try:
+        msg.edit(f"**Upload progress: {current * 100 / total:.1f}%**")
+    except:
+        pass
 
 def dl_progress(current, total, msg: Message):
     """Edit the status message with the progress of the downloading."""
-    msg.edit(f"**Download progress: {current * 100 / total:.1f}%**")
-    
+    try:
+        msg.edit(f"**Download progress: {current * 100 / total:.1f}%**")
+    except:
+        pass
 
 # ========= MSG class =========
 class Msg:
