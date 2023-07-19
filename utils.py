@@ -41,10 +41,8 @@ class Msg:
 
     def start(msg: Message) -> str:
         """return start-message text"""
-        txt = f"[‏](https://github.com/M100achuz2/archive-bot.git)Hey {msg.from_user.mention}!\n" \
+        txt = f"Hey {msg.from_user.mention}!\n" \
               "With this bot, you can compress files into an archive. Send /zip to begin, and follow the instructions." \
-              "\n\nThis robot was created by [Yeuda-By](t.me/m100achuzBots) from the team [Robotrick](t.me/robottrick)." \
-              "\nFor the source code, [click here](https://github.com/M100achuz2/archive-bot)."
         return txt
 
     zip = "Send the files you want to compress, and when you're done, send /stopzip after all files have been uploaded. \n`The bot supports files up to 20MB each, " \
