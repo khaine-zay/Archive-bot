@@ -36,6 +36,11 @@ def up_progress(current, total, msg: Message):
     """Edit the status message with the progress of the uploading."""
     msg.edit(f"**Upload progress: {current * 100 / total:.1f}%**")
 
+def dl_progress(current, total, msg: Message):
+    """Edit the status message with the progress of the downloading."""
+    msg.edit(f"**Download progress: {current * 100 / total:.1f}%**")
+    
+
 # ========= MSG class =========
 class Msg:
 
