@@ -3,7 +3,7 @@ from pyrogram import Client, filters, types
 from zipfile import ZipFile
 from os import remove, rmdir, mkdir
 
-from utils import zip_work, dir_work, up_progress, list_dir, Msg, db_session, User, commit
+from utils import zip_work, dir_work, up_progress, dl_progress, list_dir, Msg, db_session, User, commit
 
 
 @Client.on_message(filters.command("start"))
