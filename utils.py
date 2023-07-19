@@ -42,7 +42,7 @@ class Msg:
     def start(msg: Message) -> str:
         """return start-message text"""
         txt = f"Hey {msg.from_user.mention}!\n" \
-              "With this bot, you can compress files into an archive. Send /zip to begin, and follow the instructions." \
+              "With this bot, you can compress files into an archive. Send /zip to begin, and follow the instructions."
         return txt
 
     zip = "Send the files you want to compress, and when you're done, send /stopzip after all files have been uploaded. \n`The bot supports files up to 20MB each, " \
